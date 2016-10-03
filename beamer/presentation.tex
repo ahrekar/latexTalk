@@ -1,14 +1,14 @@
 \documentclass{beamer}
 \mode<presentation>{}
 \usetheme{Warsaw}
-\usepackage{hyperref}
-\usepackage[super]{natbib}
 \usepackage{graphicx}
 
 \title{Harnessing the Power of \LaTeX}
 \author{Karl Ahrendsen \and Andrew Vikartofsky}
 \institute{University of Nebraska-Lincoln}
 \date{\today}
+
+\renewcommand{\arraystretch}{1.4}
 
 \begin{document}
 
@@ -24,10 +24,8 @@
         \item A typesetting (or formatting) system
 				\includegraphics[width=50px]{img/metalWords.jpg}
 				\includegraphics[width=50px]{img/typesettingMachine.png}
-        \item Created by Donald Knuth
-			% "Father of algorithm efficiency analysis"
         \item Provides precision typsetting for computers
-		\item Designed with two goals~\cite{wikiTex}:
+		\item Designed with two goals:
             \begin{itemize}
                 \item Allow anybody to produce high-quality books with minimal effort.
                 \item Provide a system that would give exactly the same results on all computers, at any point in time.
@@ -40,12 +38,12 @@
     \begin{itemize}
             % Original author: Leslie Lamport
         \item Provides a high-level language to access the power of TeX
+        \item Uses TeX to format its output
         \item A document preparation system
 			\begin{itemize}
-				\item Focus on content rather than formatting
 				\item Writer uses plain text vs. formatted text (WYSIWYG)
+				\item Focus on content rather than formatting
 			\end{itemize}
-        \item Uses TeX to format its output
             % TeX handles layout, LaTeX Handles Content
     \end{itemize}
 \end{frame}
@@ -57,7 +55,7 @@
 		\item It might be necessary...
         \item Easy formatting of mathematical equations
         \item Cross referencing tools
-		\item Modular documents
+		\item Version control
         \item It just looks sexy...
             % TeX handles layout, LaTeX Handles Content
     \end{itemize}
@@ -65,10 +63,10 @@
 
 \section{What you need to know}
 \begin{frame}
+	\frametitle{What you need to know}
 	\begin{itemize}
 		\item Only need to edit *.tex files
 		\item Designate content with \textbackslash begin\{\}, \textbackslash end\{\}, and other labels
-		\item Whitespace is (almost) meaningless
 		\item Write, compile, review, repeat
 		\item Previous documents and Google are your friend
 	\end{itemize}
@@ -76,12 +74,12 @@
 
 \section{Workshop}
 \begin{frame}
+	\frametitle{Workshop}
 	\begin{itemize}
 		\item ``The best way to learn is to do; the worst way to teach is to talk." -Paul Halmos
 		\item Interactive demo document
 			\begin{itemize}
 				\item Compiling a \LaTeX document
-				\item Sectioning a document
 				\item Writing equations
 				\item Inputting images
 				\item Referencing equations
@@ -90,7 +88,20 @@
 	\end{itemize}
 \end{frame}
 
-\bibliographystyle{plain}
-\bibliography{presentation}
+\begin{frame}
+	\frametitle{Math Mode Commands}
+The following inputs can be placed inside a math environment (\$...\$,\$(...)\$,\textbackslash begin\{equation\}...\textbackslash end\{equation\}) to produce the described outputs.
+\begin{center}
+	\begin{tabular}{ l r }
+		Text Input & \LaTeX\ Output\\
+		\hline
+		x\^{}2 & $x^{2}$ \\ 
+		x\_o & $x_o$ \\ 
+		\textbackslash frac\{1\}\{2\} & $\frac{1}{2}$ \\ 
+		\textbackslash sqrt\{2\} & $\sqrt{2}$ \\ 
+	\end{tabular}
+\end{center}
+\end{frame}
+
 
 \end{document}

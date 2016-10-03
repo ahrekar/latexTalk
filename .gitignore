@@ -9,4 +9,6 @@
 *.blg
 *.dvi
 *.ps
+*.psi
 *~
+*.swp
